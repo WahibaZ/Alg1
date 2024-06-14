@@ -1,0 +1,22 @@
+ALGORITHM sentence
+VAR
+    ch:INTIGER:=0;
+    voy:INTIGER:=0;
+    wrd:INTIGER:=0;
+    c:CHAR:=' ';
+BEGIN
+    WHILE(c<> '.') DO 
+        Read (c)
+        ch:= ch + 1;
+        IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN 
+            voy:=voy + 1;
+        END_IF
+        IF (c = ' ') THEN
+            wrd:= wrd+ 1;
+        END_IF
+    END_WHILE
+    Write("la longueur de la phrase est: ",ch);
+    Write("le nombre de mots est: ",wrd);
+    Write("le nombre des voyelles est: ",voy);
+END
+
